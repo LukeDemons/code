@@ -1,0 +1,168 @@
+.home-body {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  white-space: normal;
+  text-align: justify;
+  text-justify: inter-ideograph;
+
+  .container {
+    width: 102%;
+    padding: 0 12%;
+    margin: 56px auto;
+  }
+}
+
+.post-container {
+  width: 100%;
+  max-height: 90%;
+  overflow-x: scroll;
+
+  .post-list {
+    list-style: none;
+    animation: bodyshow .9s linear;
+
+    li {
+      float: left;
+      margin: 15px;
+      padding: 20px;
+      box-shadow: 0 0 8px 0 rgba(0, 0, 0, .25);
+      transition: all .3s linear;
+      color: #333;
+      cursor: pointer;
+
+      &:hover {
+        box-shadow: 0 0 18px 0 rgba(0, 0, 0, .5);
+      }
+
+      a {
+        &:link,
+        &:visited,
+        &:hover,
+        &:active {
+          color: inherit;
+          text-decoration: none;
+        }
+      }
+    }
+
+    .post-title {
+      font-size: 1.1em;
+      color: #3cba54;
+    }
+
+    p,
+    h3 {
+      display: block;
+      color: #333;
+      font-size: .9em;
+      margin: 9px 0 3px;
+    }
+  }
+
+  .post-cate-list {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .post-container {
+    .post-list {
+      li {        
+        margin: 18px;
+        padding: 20px;
+      }
+    }
+  } 
+}
+
+
+@media screen and (min-height: 1000px) {
+  .post-container {
+    .post-list {
+      li {        
+        margin: 20px;
+        padding: 30px;
+      }
+    }
+  } 
+}
+
+@media screen and (min-height: 1200px) {
+  .post-container {
+    .post-list {
+      li {        
+        margin: 30px;
+        padding: 50px;
+      }
+    }
+  } 
+}
+
+
+@media screen and (max-width: 960px) {
+  .home-body {
+    display: block;
+    width: 100%;
+    height: auto;
+    overflow: visible;
+    font-size: .9em;
+
+    .container {
+      padding: 0 5%;
+      margin: 72px auto;
+    }
+  }
+
+  .post-container {
+    .post-list {
+      li {
+        display: block;
+        width: 85%;
+        padding: 20px 40px;
+        margin: 10px 6%;      
+      }
+    }
+  } 
+}
+
+@media screen and (max-width: 640px) {
+
+  .post-container {
+    .post-list {
+      li {
+        display: block;
+        width: 90%;
+        padding: 20px;
+        margin: 10px 4%;      
+      }
+    }
+  } 
+
+}
+
+@keyframes 'bodyshow' {
+  0% {
+    top: -100px;
+    opacity: 0;
+  }
+
+  33% {
+    top: -60px;
+    opacity: .2;
+  }
+
+  66% {
+    top: -30px;
+    opacity: .6;
+  }
+
+  100% {
+    top: 0;
+    opacity: 1;
+  }
+}

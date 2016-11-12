@@ -1,0 +1,38 @@
+---
+layout: default 
+---
+<a class="back-btn" href="/">
+  <i class="fa fa-camera-retro"></i>
+</a>
+<article class="home-body">
+  <div class="container post-container">
+    <ul class="post-list" data-cate="all">
+      {% for post in paginator.posts %}
+      <li>
+        <a href="{{ site.baseurl }}{{ post.url }}">
+          <h2 class="post-title">{{ post.title }}</h2>
+          {{ post.excerpt }}
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+    <!-- 分类菜单内容 -->
+    {% for category in site.categories %}
+    <ul class="post-list post-cate-list" data-cate="{{category | first}}">
+      {% for posts in category  %}
+      {% for post in posts %}
+      {% if post.url %}
+      <li>
+        <a href="{{ site.baseurl }}{{ post.url }}">
+          <h2 class="post-title">{{ post.title }}</h2>
+          {{ post.excerpt }}
+        </a>
+      </li>
+      {% endif %}
+      {% endfor %}
+      {% endfor %}
+    </ul>
+    {% endfor %}
+  </div>
+</article>
+{% include pagination.html %}

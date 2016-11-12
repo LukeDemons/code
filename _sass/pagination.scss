@@ -1,0 +1,38 @@
+.pagination {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+
+  .previous {
+    float: left;
+  }
+  .next {
+    float: right;
+  }
+
+  &:after {
+    content: "";
+    display: block;
+    height: 0;
+    width: 0;
+    clear: both;
+  }
+
+  a {
+    margin: 10px;
+    padding: 10px;
+    border-radius: 4px;
+    line-height: 40px;
+    font-family: 'Open Sans', 'Lantinghei SC', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    color: #CCC;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 1px;
+    &:hover {
+      color: #3cba54;
+    }
+  }
+}
+ 
