@@ -26,6 +26,7 @@ Ceph从搭建开始接触
 git clone -b v10.2.3 https://github.com/ceph/ceph.git
 ```
 然后准备安装依赖
+
 > The list of Debian or RPM packages dependencies can be installed with:
 
 ```bash
