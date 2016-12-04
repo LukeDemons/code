@@ -5,3 +5,7 @@
 /_site/
 
 /node_modules/
+
+_posts/.DS_Store
+images/2015/.DS_Store
+.DS_Store
